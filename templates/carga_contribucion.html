@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Carga Contribuciones {% endblock %}
+
+{% block content %}
+     <div class="container">
+         <div class="row">
+             <div class="col-md-1">|1|</div>
+             <div class="col-md-1">|2|</div>
+             <div class="col-md-1">|3|</div>
+             <div class="col-md-1">|4|</div>
+             <div class="col-md-1">|5|</div>
+             <div class="col-md-1">|6|</div>
+             <div class="col-md-1">|7|</div>
+             <div class="col-md-1">|8|</div>
+             <div class="col-md-1">|9|</div>
+             <div class="col-md-1">|10|</div>
+             <div class="col-md-1">|11|</div>
+             <div class="col-md-1">|12|</div>
+         </div>
+     </div>
+    <div class="container">
+        {% for dato in trabajos.all %}
+        <div class="row">
+            <div class="col-md-1">[{{ dato.registro }}]</div>
+            <div class="col-md-9 textonegrita">{{ dato.titulo }}.</div>
+            <div class="col-md-2"></div>
+        </div>
+            {% for integrantes in dato.participantes.all %}
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">{{ integrantes.nombre }} {{ integrantes.primer_apellido }} {{ integrantes.segundo_apellido }}.</div>
+            <div class="col-md-7">{{ integrantes.institucion }}.</div>
+            <div class="col-md-1"></div>
+
+        </div>
+            {% endfor %}
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

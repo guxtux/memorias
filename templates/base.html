@@ -1,0 +1,46 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/formato.css' %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8"><img src="{% static 'img/banner_vciem.jpg' class="center-block" alt="Logo AMFEM" %}" /> </div>
+                <div class="col-md-2"></div>
+            </div>
+     </div>
+     <h1 class="textogrande">Listado de Trabajos Libres incluidos en la Memoria Electrónica</h1>
+
+    {% block content %} {% endblock %}
+
+    {% block footer %}
+        <div class="container">
+            <div class="row">
+                <div class="col md-4"></div>
+                <div class="col md-4 textocentrado"><span class="glyphicon glyphicon-copyright-mark"></span>
+                    2016. Asociación Mexicana de Facultades y Escuelas de Medicina, A.C.
+                    <br />
+                    Manuel López Cotilla 754, Colonia Del Valle, C.P. 03100, Delegación Benito Juárez
+                    <br />
+                   <span class="glyphicon glyphicon-phone-alt"></span> (55) 5682-9482, (55) 5687-9323
+                    <br />
+                    <span class="glyphicon glyphicon-hand-right"></span> Contacto: <a href="mailto:siiem.amfem@gmail.com">siiem.amfem@gmail.com</a>
+                </div>
+                <div class="col md-4"></div>
+            </div>
+         </div>
+    {% endblock %}
+</body>
+</html>

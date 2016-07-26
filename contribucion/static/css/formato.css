@@ -1,0 +1,19 @@
+.textogrande{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    color : red;
+    font-size: 120%;
+    text-align: center;
+}
+
+.textocentrado{
+    text-align: center;
+    font-size: smaller;
+}
+.centracelda {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.textonegrita{
+    font-weight: bold;
+}
